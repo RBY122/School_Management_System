@@ -1,3 +1,7 @@
+// Add to each dashboard JS
+if (!localStorage.getItem('userRole')) {
+  window.location.href = 'index.html';
+}
 
 document.getElementById('loginForm').addEventListener('submit', function(e) {
   e.preventDefault();
@@ -43,4 +47,24 @@ function loadDashboard(role) {
       loadModules(['profile', 'results', 'transcript', 'fees']);
       break;
   }
+}
+
+document.getElementById('successPopup').classList.remove('d-none');
+document.getElementById('successPopup').classList.add('show');
+
+setTimeout(() => {
+  document.getElementById('successPopup').classList.add('d-none');
+}, 3000);
+document.addEventListener('DOMContentLoaded', () => {
+  const role = localStorage.getItem('userRole');
+  if (role) {
+    loadDashboard(role);
+  } else {
+    window.location.href = 'index.html';
+  }
+});
+
+function logout() {
+  localStorage.removeItem('userRole');
+  window.location.href = 'index.html';
 }
