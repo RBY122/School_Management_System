@@ -52,9 +52,7 @@ function loadDashboard(role) {
 document.getElementById('successPopup').classList.remove('d-none');
 document.getElementById('successPopup').classList.add('show');
 
-setTimeout(() => {
-  document.getElementById('successPopup').classList.add('d-none');
-}, 3000);
+
 document.addEventListener('DOMContentLoaded', () => {
   const role = localStorage.getItem('userRole');
   if (role) {
