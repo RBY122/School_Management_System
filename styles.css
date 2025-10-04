@@ -1,24 +1,125 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
+nav {
+  background-color: #333;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 nav ul {
   list-style: none;
-  background: #333;
-  padding: 0;
   display: flex;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
   margin: 0;
 }
 
-nav ul li a {
+nav ul li a,
+nav button {
   color: white;
   padding: 15px;
   display: block;
   text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
 }
+
+nav ul li a:hover,
+nav button:hover {
+  background-color: #555;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2, h3 {
+  color: #333;
+}
+form {
+  margin-top: 20px;
+}
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form input[type="submit"] {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+form input[type="submit"]:hover {
+  background-color: #555;
+}
+.alert {
+  padding: 10px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+.alert.success {background-color: #4CAF50;} /* Green */
+.alert.info {background-color: #2196F3;} /* Blue */
+.alert.warning {background-color: #ff9800;} /* Orange */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+table, th, td {
+  border: 1px solid #ddd;
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+th {
+  background-color: #f4f4f4;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tr:hover {
+  background-color: #f1f1f1;
+}
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    text-align: center;
+  }
+}
+/* Additional styles for specific modules can be added here */
